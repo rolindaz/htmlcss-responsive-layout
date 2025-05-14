@@ -45,7 +45,7 @@ img, iframe, h1 {
 }
 
 .container {
-    width: 90%;
+    width: 95%;
     max-width: 400px;
     margin: 0 auto;
     padding: 2rem 0;
@@ -69,7 +69,7 @@ img, iframe, h1 {
 /* #region Header */
 
 header {
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     h1 {
         color: var(--gb-bright-primary);
         text-shadow: 1px 1px var(--gb-text-shadow);
@@ -137,6 +137,7 @@ main {
             hr {
                 width: 20%;
                 height: 0;
+                border: none;
                 border-top: 2px solid var(--gb-bright-primary);
             }
             img {
@@ -278,62 +279,40 @@ main {
 
 /*Medium*/
 
-/*@media screen and (min-width: 768px) {
-    .container {
-        width: 90%;
-        max-width: 720px;
-        .col {
-            width: calc(100% / 3);
+@media screen and (min-width: 768px) {
+    header {
+        h1 {
+            text-align: start;
         }
-        .col-md-1 {
-            width: calc(100% / 12 * 1);
-        }
-        
-        .col-md-2 {
-            width: calc(100% / 12 * 2);
-        }
-        
-        .col-md-3 {
-            width: calc(100% / 12 * 3);
-        }
-        
-        .col-md-4 {
-            width: calc((100% - 70px) / 12 * 4);
-            flex-basis: auto;
-        }
-        
-        .col-md-5 {
-            width: calc(100% / 12 * 5);
-            flex-basis: auto;
-        }
-        
-        .col-md-6 {
-            width: calc(100% / 12 * 6);
-        }
-        
-        .col-md-7 {
-            width: calc(100% / 12 * 7);
-            flex-basis: auto;
-        }
-        
-        .col-md-8 {
-            width: calc(100% / 12 * 8);
-        }
-        
-        .col-md-9 {
-            width: calc(100% / 12 * 9);
-        }
-        
-        .col-md-10 {
-            width: calc(100% / 12 * 10);
-        }
-        
-        .col-md-11 {
-            width: calc(100% / 12 * 11);
-        }
-        
-        .col-md-12 {
-            width: 100%;
+    }
+    main {
+        .container {
+            padding: 2.5rem 0.5rem;
+            max-width: 720px;
+            #recipe {
+                h2 {
+                    font-size: 28px;
+                    span {
+                        display: inline-block;
+                    }
+                }
+                #summary {
+                    div {
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        span {
+                            display: inline-block;
+                            flex-basis: calc(100% / 3);
+                            strong {
+                                display: inline-block;
+                            }
+                        }
+                        span:last-child {
+                            flex-basis: 40%;
+                        }
+                    }
+                }
+            }
         }
     }
 }
