@@ -1,3 +1,5 @@
+/* #region General*/
+
 * {
     margin: 0;
     padding: 0;
@@ -9,36 +11,43 @@
     --gb-text-shadow: #a09283;
     --gb-light-primary: white;
     --gb-light-secondary: #f6f5f3;
+    --gb-text-lighter: #999999;
+    --gb-text-darker: #4e3969;
+    --gb-dark-primary: black;
 }
+
+img, iframe, h1 {
+    max-width: 100%;
+}
+
+/* #endregion General*/
+
+/* #region Utilities*/
 
 .nerko-one-regular {
     font-family: "Nerko One", cursive;
     font-weight: 400;
     font-style: normal;
-  }  
-
-img {
-    max-width: 100%;
 }
 
-header {
-    padding: 1rem;
-    h1 {
-        color: var(--gb-bright-primary);
-        text-shadow: 1px 1px var(--gb-text-shadow);
-        text-align: center;
-        font-size: 36px;
-    }
-}
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
 
-main {
-    background-color: var(--gb-light-secondary);
+/* #endregion Utilities*/
+
+.d-flex {
+    display: flex;
 }
 
 .container {
-    width: 95%;
-    max-width: 520px;
+    width: 90%;
+    max-width: 450px;
     margin: 0 auto;
+    padding: 2rem 0;
 }
 
 .row {
@@ -56,7 +65,54 @@ main {
     width: 100%;
 }
 
-/*Utilities classes for a responsive grid layout*/
+/* #region Header */
+
+header {
+    padding: 1rem;
+    h1 {
+        color: var(--gb-bright-primary);
+        text-shadow: 1px 1px var(--gb-text-shadow);
+        text-align: center;
+        font-size: 58px;
+    }
+}
+
+/* #endregion Header */
+
+/* #region Main */
+
+main {
+    background-color: var(--gb-light-secondary);
+    .container {
+        #recipe {
+            >span {
+                display: block;
+                color: var(--gb-text-lighter);
+                padding: .75rem 0;
+            }
+            h2 {
+                color: var(--gb-text-darker);
+                padding-bottom: 1rem;
+                span {
+                    display: none;
+                }
+            }
+        }
+        #summary {
+            padding: 1.25rem;
+            background-color: var(--gb-light-primary);
+            flex-direction: column;
+            h3 {
+                margin-bottom: 1rem;
+            }
+
+        }
+    }
+}
+
+/* #endregion Main */
+
+/* #region Utilities classes for a responsive grid layout*/
 
 .col {
     width: auto;
@@ -114,6 +170,8 @@ main {
 .col-12 {
     width: 100%;
 }
+
+/* #endregion Utilities classes for a responsive grid layout*/
 
 /*Small*/
 
