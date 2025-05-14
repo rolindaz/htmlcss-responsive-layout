@@ -162,12 +162,12 @@ main {
                 padding: 2rem 0;
             }
             img {
-                padding-bottom: 1rem;
                 display: block;
                 max-width: 70%;
                 margin: 0 auto;
             }
             p {
+                margin-top: 1rem;
                 line-height: 2rem;
             }
         }
@@ -218,6 +218,29 @@ footer {
 
 /* #region Responsive*/
 
+/*Large Mobile Mode (>576px)*/
+
+@media screen and (min-width: 576px) {
+    main {
+        #recipe {
+            #icons {
+                padding: 2rem 0;
+                button {
+                    flex-basis: calc(100% / 5 - 20px);
+                }
+            }
+        }
+        #presentation {
+            img {
+                width: 40%;
+                float: left;
+                padding: 1.6rem 0.7rem 0 0;
+            }
+        }
+    }
+    
+}
+
 /*Tablet Mode (>768px)*/
 
 @media screen and (min-width: 768px) {
@@ -249,22 +272,9 @@ footer {
                         }
                     }
                 }
-                #icons {
-                    padding: 2rem 0;
-                    button {
-                        flex-basis: calc(100% / 5 - 15px);
-                    }
-                }
             }
             #ad {
                 display: block;
-            }
-            #presentation {
-                img {
-                    width: 40%;
-                    float: left;
-                    padding: 0.6rem 0.7rem 0 0;
-                }
             }
         }
     }
