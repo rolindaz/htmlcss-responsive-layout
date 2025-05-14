@@ -46,9 +46,8 @@ img, iframe, h1 {
 
 .container {
     width: 95%;
-    max-width: 400px;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 2rem 0.5rem;
 }
 
 .row {
@@ -99,14 +98,17 @@ main {
                 }
             }
             iframe {
+                width: 100%;
                 display: block;
             }
             #summary {
                 padding: 1.25rem;
                 background-color: var(--gb-light-primary);
-                flex-direction: column;
                 line-height: 2rem;
                 box-shadow: 2px 4px 4px var(--gb-box-shadow);
+                div {
+                    flex-direction: column;
+                }
                 h3 {
                     margin-bottom: 1rem;
                 }
@@ -287,8 +289,7 @@ main {
     }
     main {
         .container {
-            padding: 2.5rem 0.5rem;
-            max-width: 720px;
+            padding: 2.5rem 1rem;
             #recipe {
                 h2 {
                     font-size: 28px;
@@ -302,14 +303,16 @@ main {
                         flex-wrap: wrap;
                         span {
                             display: inline-block;
-                            flex-basis: calc(100% / 3);
+                            flex-basis: calc(100% / 3 - 3px);
                             strong {
                                 display: inline-block;
                             }
                         }
-                        span:last-child {
-                            flex-basis: 40%;
-                        }
+                    }
+                }
+                #icons {
+                    button {
+                        flex-basis: calc(100% / 5 - 15px);
                     }
                 }
             }
