@@ -15,6 +15,7 @@
     --gb-text-lighter: #999999;
     --gb-text-darker: #4e3969;
     --gb-dark-primary: black;
+    --gb-brand: #7c69a4; 
 }
 
 img, iframe, h1 {
@@ -24,6 +25,8 @@ img, iframe, h1 {
 /* #endregion General*/
 
 /* #region Utilities*/
+
+/* #region Fonts*/
 
 .nerko-one-regular {
     font-family: "Nerko One", cursive;
@@ -36,9 +39,9 @@ img, iframe, h1 {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-  }
+}
 
-/* #endregion Utilities*/
+/* #endregion Fonts*/
 
 .d-flex {
     display: flex;
@@ -48,6 +51,24 @@ img, iframe, h1 {
     width: 95%;
     margin: 0 auto;
     padding: 2rem 0.5rem;
+}
+
+.cont-iframe {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .row {
@@ -64,6 +85,8 @@ img, iframe, h1 {
 .col-12 {
     width: 100%;
 }
+
+/* #endregion Utilities*/
 
 /* #region Header */
 
@@ -97,10 +120,7 @@ main {
                     display: none;
                 }
             }
-            iframe {
-                width: 100%;
-                display: block;
-            }
+            
             #summary {
                 padding: 1.25rem;
                 background-color: var(--gb-light-primary);
@@ -160,6 +180,46 @@ main {
 }
 
 /* #endregion Main */
+
+/* #region Footer */
+
+footer {
+    padding: 1.5rem;
+    background-color: var(--gb-brand);
+    color: var(--gb-light-primary);
+    >div {
+        flex-direction: column;
+        align-items: center;
+        #left {
+            text-align: center;
+            margin-bottom: 1rem;
+            strong,
+            span {
+                display: block;
+            }
+            strong {
+                margin-bottom: .5rem;
+            }
+        }
+        #right {
+            ul {
+                justify-content: center;
+                list-style: none;
+                flex-wrap: wrap;
+                row-gap: 1rem;
+                column-gap: .75rem;
+                li {
+                    flex-shrink: 0;
+                    a {
+                        color: var(--gb-light-primary);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* #endregion Footer */
 
 /* #region Utilities classes for a responsive grid layout*/
 
