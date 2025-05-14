@@ -4,12 +4,35 @@
     box-sizing: border-box;
 }
 
+:root {
+    --gb-bright-primary: #fe9514;
+    --gb-text-shadow: #a09283;
+    --gb-light-primary: white;
+    --gb-light-secondary: #f6f5f3;
+}
+
+.nerko-one-regular {
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
 img {
     max-width: 100%;
 }
 
 header {
+    padding: 1rem;
+    h1 {
+        color: var(--gb-bright-primary);
+        text-shadow: 1px 1px var(--gb-text-shadow);
+        text-align: center;
+        font-size: 36px;
+    }
+}
 
+main {
+    background-color: var(--gb-light-secondary);
 }
 
 .container {
